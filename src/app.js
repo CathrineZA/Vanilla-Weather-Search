@@ -111,7 +111,29 @@ function getSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  var temperatureElement = document.querySelector("#temperature");
+  var fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  var temperatureElement = document.querySelector("#temperature");
+  var fahrenheitTemperature = (fahrenheitTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+var celsiusTemperature = null;
+
 var form = document.querySelector("#search-form");
 form.addEventListener("submit", getSubmit);
+
+var fahrenheitLink = document.querySelector("#fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+var celsiusLink = document.querySelector("#celsiusLink");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Midrand");

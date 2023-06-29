@@ -19,7 +19,6 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-
   color: rgb(135, 135, 135);
   font-size: 16px;
   font-weight: 100;
@@ -30,18 +29,13 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-.weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
-}
-
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
 
-.overview {
+.the-front {
   margin-bottom: 20px;
 }
 
@@ -62,15 +56,7 @@ li:first-letter {
   position: relative;
   font-size: 16px;
   top: -34px;
-}
-
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
+  color: #000;
 }
 
 .weather-forecast {
@@ -101,5 +87,14 @@ li:first-letter {
   max-width: 600px;
   border-radius: 10px;
   margin: 0 auto;
-  background: url(images/cloudy.jpg);
+  background: linear-gradient(
+    105.9deg,
+    rgb(133, 13, 230) 51.9%,
+    rgb(230, 13, 202) 73.1%,
+    rgb(242, 180, 107) 94.1%
+  );
+}
+
+.footer {
+  text-align: left;
 }
